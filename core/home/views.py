@@ -9,7 +9,9 @@ def home (request):
     #                     <p> I am Django server.<p>
     #                     <hr>
     #                     <h2 style="color:red" >Hey I am Django sserver.<h2>""")
-    return render(request,"index.html")
+    
+    return render(request,"home/index.html")
+
 
 
 def success (request):
