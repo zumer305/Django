@@ -10,14 +10,16 @@ def home (request):
     #                     <hr>
     #                     <h2 style="color:red" >Hey I am Django sserver.<h2>""")
     peoples=[
-       { 'name':'zumer', 'age':21},
-       { 'name':'alishba', 'age':20},
+       { 'name':'zumer', 'age':16},
+       { 'name':'alishba', 'age':17},
        { 'name':'wahab', 'age':25},
        { 'name':'wahib', 'age':27},
        { 'name':'subhan', 'age':29},
     ]
+    text=""" The Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ullam possimus alias quibusdam eos! Nisi veniam qui, officiis, distinctio explicabo rerum omnis suscipit magnam voluptatum excepturi dolore illo vero fugiat molestias. Accusantium excepturi, ducimus esse blanditiis beatae ab eos cum error repellat obcaecati quibusdam exercitationem debitis molestiae. Molestiae, laborum vero."""
+
     
-    return render(request,"home/index.html",context={'peoples':peoples})
+    return render(request,"home/index.html",context={'peoples':peoples,'text':text })
 
 
 
