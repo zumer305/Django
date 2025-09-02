@@ -9,8 +9,15 @@ def home (request):
     #                     <p> I am Django server.<p>
     #                     <hr>
     #                     <h2 style="color:red" >Hey I am Django sserver.<h2>""")
+    peoples=[
+       { 'name':'zumer', 'age':21},
+       { 'name':'alishba', 'age':20},
+       { 'name':'wahab', 'age':25},
+       { 'name':'wahib', 'age':27},
+       { 'name':'subhan', 'age':29},
+    ]
     
-    return render(request,"home/index.html")
+    return render(request,"home/index.html",context={'peoples':peoples})
 
 
 

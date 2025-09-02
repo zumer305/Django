@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Django server</title>
+    <style>
+      table,th,td{
+        border: 1px,solid black
+      }
+    </style>
   </head>
   <body>
     <h1>I am Django server.</h1>
-    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ex.</h2>
+    <!-- <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ex.</h2>
     <p>
       I am Django server.I am Django server.I am Django server.I am Django
       server.I am Django server.I am Django server.I am Django server.I am
@@ -23,7 +28,24 @@
       Django server.I am Django server.I am Django server.I am Django server.I
       am Django server.I am Django server.I am Django server.I am Django
       server.I am Django server.I am Django server.I am Django server.
-    </p>
+    </p> -->
+    
+    <!-- {{peoples}} -->
+    <table>
+  <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  {% for people in peoples%}
+  <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{people.name}}</td>
+    <td>{{people.age}}</td>
+  </tr>
+  {% endfor%}
+ 
+</table>
   </body>
   <script>
     console.log("Django")
