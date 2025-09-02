@@ -22,8 +22,13 @@ def home (request):
     
     return render(request,"home/index.html",context={'peoples':peoples,'text':text,'vegetables':vegetabales })
 
+def about (request):
+     return render(request,"home/about.html" )
 
 
-def success (request):
-    print("*" *10)
-    return HttpResponse("<h1>Hey I am Django success.<h1>")
+def contact (request):
+ return render(request,"home/contact.html")
+
+# def success (request):
+#     print("*" *10)
+#     return HttpResponse("<h1>Hey I am Django success.<h1>")

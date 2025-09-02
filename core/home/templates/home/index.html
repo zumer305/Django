@@ -57,7 +57,16 @@
 </table>
 <p>{{text| truncatechars:80}}</p>
 
-<p></p>
+<p>
+  {%if "cucumber" in vegetables%}
+  Yes available
+  {%elif "apple" in vegetables%}
+  Yes available
+
+  {%else%}
+  not available
+  {%endif%}
+</p>
 
   </body>
   <script>
