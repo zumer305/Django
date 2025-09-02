@@ -20,14 +20,17 @@ def home (request):
     text=""" The Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ullam possimus alias quibusdam eos! Nisi veniam qui, officiis, distinctio explicabo rerum omnis suscipit magnam voluptatum excepturi dolore illo vero fugiat molestias. Accusantium excepturi, ducimus esse blanditiis beatae ab eos cum error repellat obcaecati quibusdam exercitationem debitis molestiae. Molestiae, laborum vero."""
 
     
-    return render(request,"home/index.html",context={'peoples':peoples,'text':text,'vegetables':vegetabales })
+    return render(request,"home/index.html",context={'page':'Django tutorial','peoples':peoples,'text':text,'vegetables':vegetabales })
 
-def about (request):
-     return render(request,"home/about.html" )
+def about(request):
+    context = {'page': 'about'}
+    return render(request, "home/about.html", context)
+
 
 
 def contact (request):
- return render(request,"home/contact.html")
+ context={'page':'contact'}
+ return render(request,"home/contact.html",context)
 
 # def success (request):
 #     print("*" *10)
