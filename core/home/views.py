@@ -16,10 +16,11 @@ def home (request):
        { 'name':'wahib', 'age':27},
        { 'name':'subhan', 'age':29},
     ]
+    vegetabales=['banana','orange','apple']
     text=""" The Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ullam possimus alias quibusdam eos! Nisi veniam qui, officiis, distinctio explicabo rerum omnis suscipit magnam voluptatum excepturi dolore illo vero fugiat molestias. Accusantium excepturi, ducimus esse blanditiis beatae ab eos cum error repellat obcaecati quibusdam exercitationem debitis molestiae. Molestiae, laborum vero."""
 
     
-    return render(request,"home/index.html",context={'peoples':peoples,'text':text })
+    return render(request,"home/index.html",context={'peoples':peoples,'text':text,'vegetables':vegetabales })
 
 
 
